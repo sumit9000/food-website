@@ -1,0 +1,304 @@
+/* css reset */
+*{
+    margin :0px;
+    padding: 0px;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+/* css varibles */
+:root{
+    --navbar-height: 60 px;
+}
+/* navigation bar:  */
+#navbar{
+    display :flex;
+    align-items: center;
+    /* position:sticky; */
+}
+/* navigation bar:logo and image  */
+#logo {
+    margin: 10px 34px;
+
+}
+#logo img{
+    height :56px;
+    margin: 3px 6px;
+}
+
+/* navigation bar:list styling */
+#navbar {
+    position: absolute;
+    top:0px;
+    position: sticky;
+}
+#navbar::before{
+    content:"";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+    opacity:0.4;
+}
+#navbar ul{
+    display:flex;
+    
+}
+
+#navbar ul li{
+     list-style: none;
+     font-size: 1.3 rem;
+     font-family: 'Baloo Bhaina 2', cursive;
+
+}
+#navbar ul li a{
+    color: brown;
+   display:block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+    
+}
+#navbar ul li a:hover{
+    color:black;
+
+  background-color: #9c669c
+    
+}
+/* home section  */
+#home{
+    display :flex;
+    flex-direction: column;
+    padding :3px 256px;
+    height: 562px;
+    justify-content: center;
+    align-items:center;
+    top:0px;
+    left:0px;
+    
+}
+#home::before{
+    content:"";
+    position: absolute;
+    background:url('../food/foodr.jpg') no-repeat center center/cover;
+    height : 575px; 
+    width : 100%;
+    z-index : -1;
+    opacity : 0.89;
+    
+}
+#home h1{
+
+    color:black;
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+#home p{
+
+    color:black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+/* services section */
+#services{
+    margin: 16px;
+    display: flex;
+    margin: auto;
+
+}
+
+#services .box{
+    border: 2px solid darkgreen;
+    padding :34px;
+    margin: 54px 32px;
+     border-radius: 45px;
+     background-color: thistle;
+   
+}
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display:block;
+    }
+#services .box p{
+
+}
+#services{}
+/* client section */
+
+#clients-section{
+    position: relative;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+    } 
+#clients-section::before{
+    content: "";
+    position :absolute;
+    background: url('../background/background 1.jpg');
+    width: 100%;
+    height: 243px;
+    z-index: -1;
+    opacity: 0.8;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#clients img{
+    height :128px;
+}
+
+.client-item{
+    padding: 24px;
+}
+/* contact us */
+#contactus{
+    position :relative;
+    
+}
+#contactus::before{
+    content:"";
+    position :absolute;
+    background: url('../contact/contact us.jpg') no-repeat center center/cover;
+width:100%;
+height: 600px;
+z-index: -1;
+opacity:0.7;
+}
+#contact-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 43px;
+}
+#contact-box input,
+#contact-box text area{
+    width:100%;
+    padding :0.5rem;
+    font-size: 1.1rem;
+border-radius: 9px;
+}
+#contact-box{
+    border-radius: 9px;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.5rem;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+footer{
+    background-color:black;
+    color :white;
+    padding :9px 20px;
+}
+/* utility classes */
+.h-primary center{
+ 
+    font-size: 4.8rem;
+    padding: 12px;
+
+   
+     }
+.h-secondary center{
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 2.3rem;
+    padding: 12px;
+    margin: 12px;
+    height: 100%;
+    width: 100%;
+ 
+
+}
+.btn{
+    padding: 7px 67px;
+    border: blueviolet;
+    background-color: chocolate;
+    color: cornflowerblue;
+    margin: 10px;
+    font-size: 1.5rem;
+    border-radius: 56px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+.section{
+
+}
+
+@media screen and (max-width:900px){
+    /* navigation section */
+#navbar{
+    flex-direction: column;
+}
+#navbar ul li a{
+    font-size: 1rem;
+    padding :0px 7px;
+    padding-bottom: 8px;
+}
+    /* home section  */
+#home{
+height:370px;
+padding :3px 65px;
+}   
+#home::before{
+height:480px;
+}   
+#home p{
+font-size: 13px;
+}   
+/* services section */
+ #services{
+flex-direction: column;
+
+ }
+ #services.box{
+padding:14px;
+margin:2px 0px;
+margin-bottom: 20px;
+
+ }
+/* clients section  */
+#clients{
+ flex-wrap:wrap ;
+ 
+}
+#clients img{
+width: 66px ;
+padding : 2px 6px;
+height :auto;
+/* height :auto; */
+
+}
+
+
+
+/* contact us section  */
+
+/* footer */
+
+/* utility class */
+.h-primary{
+    font-size: 26px;
+}
+.btn{
+    font-size: 13px;
+    padding:4px 8px;
+}
+
+
+}
+
+
+
+
